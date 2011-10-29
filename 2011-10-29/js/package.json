@@ -1,0 +1,7 @@
+{
+    "directories": {},
+    "dependencies": {
+        "dojo": "1.7.0",
+        "xstyle": "0.0.2"
+    }
+}

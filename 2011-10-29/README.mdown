@@ -1,0 +1,2 @@
+
+Slides from my [AMD & CommonJS presentation](http://briancavalier.com/presentations/pgh-js-amd-10-2011) at the [Pgh JS Meetup in Oct 2011](http://www.meetup.com/Pittsburgh-JavaScript-Developers/events/34568402/)
