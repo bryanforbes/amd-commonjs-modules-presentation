@@ -29,7 +29,7 @@ define(['require', './Promise'], function(require, Promise) {
 			loaded = false,
 			resolveOnLoad = [];
 			
-		require(['text!' + slidePath], function(slideContent) {
+		require(['dojo/text!' + slidePath], function(slideContent) {
 			cachedSlides = slideContent.split(/\s*\<hr\s*\/?\>\s*|\s*----\s*/i);
 			loaded = true;
 			

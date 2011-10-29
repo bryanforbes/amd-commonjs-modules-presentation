@@ -1,6 +1,6 @@
 define({
-	theme:      { module: 'css!themes/black/theme.css' },
-	transition: { module: 'css!themes/fade.css' },
+	theme:      { module: 'xstyle/css!themes/black/theme.css' },
+	transition: { module: 'xstyle/css!themes/none.css' },
     model: {
 	     create: {
              module: 'hc/slides/SingleFilePresentationModel',

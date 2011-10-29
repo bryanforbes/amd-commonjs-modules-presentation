@@ -17,6 +17,9 @@ body {
 }
 
 footer {
+	position: absolute;
+	bottom: 1em;
+	right: 1em;
 	min-width: 40em;
 	width: 80%;
 	margin: 1em auto;

@@ -170,12 +170,14 @@ define([], function() {
 			if(e.altKey||e.ctrlKey||e.metaKey||e.shiftKey) return true;
 
 			switch(key) {
+				case 33: // Page Up
 				case 37: // Left arrow
 				// case 38: // Up arrow, used for keyboard scrolling
 					slideView.prev().then(success);
 					stopEvent(e);
 					ret = false;
 					break;
+				case 34: // Page Down
 				case 39: // Right arrow
 				// case 40: // Down arrow, used for keyboard scrolling
 					slideView.next().then(success);

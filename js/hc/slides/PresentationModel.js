@@ -66,7 +66,7 @@ define(['require', './Promise'], function(require, Promise) {
 		*/
 		function getSlide(slide, preloadCount) {
 			var p = new Promise(),
-				slideModule = 'text!' + slidePath + '/' + slide + '.html';
+				slideModule = 'dojo/text!' + slidePath + '/' + slide + '.html';
 
 			if(0 <= slide) {
 				if(cachedSlides[slide]) {
