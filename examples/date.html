@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Date Module Example</title>
+
+	<script>
+		require = {
+			async: true,
+			paths: {
+				my: '../../examples/my'
+			}
+		};
+	</script>
+	<script src="../js/dojo/dojo.js"></script>
+</head>
+<body>
+	<h1>Contrived date parsing example</h1>
+
+	<input id="txtShort" type="text"/> <button id="btnShort" class="button">Parse Short</button>
+	<br/>
+	<input id="txtLong" type="text"/> <button id="btnLong" class="button">Parse Long</button>
+
+	<div id="output"></div>
+
+	<script>
+		require(
+			['dojo/on', 'dojo/dom', 'my/date', 'dojo/query'],
+			function(on, dom, date){
+				var output = dom.byId("output");
+
+				on(document.body, ".button:click", function(evt){
+					var type = this.id == "btnLong" ? "Long" : "Short";
+
+					output.innerHTML =
+						date["parse" + type](dom.byId("txt" + type).value);
+				});
+			}
+		);
+	</script>
+</body>
+</html>

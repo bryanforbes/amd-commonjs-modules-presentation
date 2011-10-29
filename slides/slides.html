@@ -676,34 +676,28 @@ function doStuff() { ... }
 
 <h1>Using the module</h1>
 
-<pre><code>define(
-/* 'MyApp/DateView', */
-['<em>MyLib/dateFormat</em>'],
-function(<em>dateFormat</em>) {
-	function DateView(domNode) {
-		this.dateNode = domNode
-	}
+<pre><code>require(
+  ['dojo/on', 'dojo/dom', '<em>my/date</em>', 'dojo/query'],
+  function(on, dom, <em>date</em>){
+    var output = dom.byId("output");
 
-	DateView.prototype = {
-		setDate: function(date) {
-			this.date = date;
-		},
-		renderDate: function() {
-			this.dateNode.innerHTML = 
-				<em>dateFormat.parseShort</em>(this.date);
-		}
-	};
-	
-	return DateView;
-});
+    on(document.body, ".button:click", function(evt){
+      var type = this.id == "btnLong" ? "Long" : "Short";
+
+      output.innerHTML =
+        <em>date</em>["parse" + type](dom.byId("txt" + type).value);
+    });
+  }
+);
 </code></pre>
+
+<a href="examples/date.html">Live example</a>
 
 <hr>
 
 <h1> CommonJS Module</h1>
 
-<pre><code>// CommonJS
-<em>var locale = require('dojo/date/locale')</em>,
+<pre><code><em>var locale = require('dojo/date/locale')</em>,
   shortPattern = { datePattern: 'MM/dd/yy', selector: 'date' },
   longPattern = { datePattern: 'MM/dd/yyyy', selector: 'date' };
 
